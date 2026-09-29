@@ -6,8 +6,12 @@ export default {
     orders: '注文',
     finance: '財務',
     demandForecast: '需要予測',
+    restocking: '再入荷',
+    reports: 'レポート',
     companyName: '触媒コンポーネンツ',
-    subtitle: '在庫管理システム'
+    subtitle: '在庫管理システム',
+    collapseSidebar: 'サイドバーを折りたたむ',
+    expandSidebar: 'サイドバーを展開する'
   },
 
   // Dashboard
@@ -126,6 +130,19 @@ export default {
       status: 'ステータス',
       expectedDelivery: '予定配達日',
       actualDelivery: '実際の配達日'
+    },
+    submittedOrders: {
+      title: '提出済み注文',
+      description: '再入荷タブから発注された注文',
+      noOrders: 'まだ提出された再入荷注文はありません',
+      orderId: '注文ID',
+      submittedDate: '提出日',
+      items: '品目',
+      totalCost: '合計コスト',
+      leadTime: '納期',
+      leadTimeDays: '{days}日',
+      expectedDelivery: '予定配達日',
+      status: 'ステータス'
     }
   },
 
@@ -188,6 +205,38 @@ export default {
     }
   },
 
+  // Restocking
+  restocking: {
+    title: '再入荷',
+    description: '予算を設定し、需要と在庫不足に基づいて推奨された品目を再入荷',
+    budget: {
+      title: '利用可能な予算',
+      label: '予算',
+      selectedCost: '選択済みコスト',
+      remaining: '残り予算'
+    },
+    recommendations: {
+      title: '推奨品目',
+      recommended: '推奨',
+      sku: 'SKU',
+      itemName: '品目名',
+      category: 'カテゴリ',
+      warehouse: '倉庫',
+      quantityOnHand: '手持在庫数',
+      reorderPoint: '再注文点',
+      demand: '需要（現在 / 予測）',
+      quantity: '数量',
+      unitCost: '単価',
+      itemCost: 'コスト',
+      noData: '選択した予算に該当する品目がありません'
+    },
+    placeOrder: '注文する',
+    placingOrder: '注文中...',
+    selectAtLeastOne: '注文するには少なくとも1つの品目を選択してください',
+    orderSuccess: '再入荷注文{id}が正常に送信されました。注文タブに表示されます。',
+    orderError: '再入荷注文の送信に失敗しました'
+  },
+
   // Filters
   filters: {
     timePeriod: '期間',
@@ -204,6 +253,7 @@ export default {
     shipped: '出荷済み',
     processing: '処理中',
     backordered: 'バックオーダー',
+    submitted: '提出済み',
     inStock: '在庫あり',
     lowStock: '在庫僅少',
     adequate: '適量'

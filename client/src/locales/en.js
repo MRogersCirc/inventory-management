@@ -6,8 +6,12 @@ export default {
     orders: 'Orders',
     finance: 'Finance',
     demandForecast: 'Demand Forecast',
+    restocking: 'Restocking',
+    reports: 'Reports',
     companyName: 'Catalyst Components',
-    subtitle: 'Inventory Management System'
+    subtitle: 'Inventory Management System',
+    collapseSidebar: 'Collapse sidebar',
+    expandSidebar: 'Expand sidebar'
   },
 
   // Dashboard
@@ -126,6 +130,19 @@ export default {
       status: 'Status',
       expectedDelivery: 'Expected Delivery',
       actualDelivery: 'Actual Delivery'
+    },
+    submittedOrders: {
+      title: 'Submitted Orders',
+      description: 'Restocking orders placed from the Restocking tab',
+      noOrders: 'No restocking orders submitted yet',
+      orderId: 'Order ID',
+      submittedDate: 'Submitted',
+      items: 'Items',
+      totalCost: 'Total Cost',
+      leadTime: 'Lead Time',
+      leadTimeDays: '{days} days',
+      expectedDelivery: 'Expected Delivery',
+      status: 'Status'
     }
   },
 
@@ -188,6 +205,38 @@ export default {
     }
   },
 
+  // Restocking
+  restocking: {
+    title: 'Restocking',
+    description: 'Set a budget and restock items recommended from demand and inventory shortages',
+    budget: {
+      title: 'Available Budget',
+      label: 'Budget',
+      selectedCost: 'Selected Cost',
+      remaining: 'Remaining'
+    },
+    recommendations: {
+      title: 'Recommended Items',
+      recommended: 'Recommended',
+      sku: 'SKU',
+      itemName: 'Item Name',
+      category: 'Category',
+      warehouse: 'Warehouse',
+      quantityOnHand: 'On Hand',
+      reorderPoint: 'Reorder Point',
+      demand: 'Demand (current / forecasted)',
+      quantity: 'Quantity',
+      unitCost: 'Unit Cost',
+      itemCost: 'Cost',
+      noData: 'No items available for the selected budget'
+    },
+    placeOrder: 'Place Order',
+    placingOrder: 'Placing Order...',
+    selectAtLeastOne: 'Select at least one item to place an order',
+    orderSuccess: 'Restocking order {id} submitted successfully. It will appear in the Orders tab.',
+    orderError: 'Failed to submit restocking order'
+  },
+
   // Filters
   filters: {
     timePeriod: 'Time Period',
@@ -204,6 +253,7 @@ export default {
     shipped: 'Shipped',
     processing: 'Processing',
     backordered: 'Backordered',
+    submitted: 'Submitted',
     inStock: 'In Stock',
     lowStock: 'Low Stock',
     adequate: 'Adequate'
